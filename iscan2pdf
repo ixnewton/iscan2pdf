@@ -6,7 +6,7 @@ if [ ! -d $FOLDER ]; then
 fi
 cd $FOLDER
 DIRLIST=$((ls -d */)| tr -d '/')
-SCANNAME=$(tr -d ' ' <<<$(zenity --entry --text="Set or re-use the PDF output label to be used for this scan. Iscan will then open.\nScan pages to Tiff format ordering by name default01.tiff, default02.tiff etc.\nClosing Iscan will combine and display the output PDF multi-page document.\n-------------------------------------------------------------------------------------------------------------------------\nScan Labels currently in ~/Documents/Scans:\n$DIRLIST\n-------------------------------------------------------------------------------------------------------------------------" --width=400 --title "Scan2Pdf - PDF Label")) 
+SCANNAME=$(tr -d ' ' <<<$(zenity --entry --text="Set or re-use the PDF output label to be used for this scan. Iscan will then open.\nScan pages to Tiff format ordering by name default01.tiff, default02.tiff etc.\nClosing Iscan will combine and display the output PDF multi-page document.\n-------------------------------------------------------------------------------------------------------------------------\nScan Labels currently in ~/Documents/Scans:\n$DIRLIST\n-------------------------------------------------------------------------------------------------------------------------" --width=400 --title "iScan2Pdf - PDF Label")) 
 if [ -z $SCANNAME ]; then
     exit 1
 fi
@@ -22,7 +22,7 @@ if ls $FILE 1> /dev/null 2>&1; then
 else
     zenity --info --text="No scanned TIFF image files found to create a PDF as output!" \
            --width=400 --height=100 \
-           --title "Scan2Pdf - No output generated!"
+           --title "iScan2Pdf - No output generated!"
 fi
 
 
