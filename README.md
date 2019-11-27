@@ -5,7 +5,7 @@ This script was started when I needed to scan multiple documents to a single PDF
 
 The script simply sets up a folder under ~/Documents/Scans for each scan using an entered scan label then runs iscan. When enough numbered .tiff files (default01.tiff, default02.tiff etc) are created closing iscan will generate the final pdf file with the given scan label. 
 
-A working installation of iscan is required and zenity for script popup dialogues. Both are available in Linux distribution repositories. I install scripts like this to the standard /usr/local/bin and manually create a start menu entry to run it.
+A working installation of iscan is required and zenity for script popup dialogues. Both are available in Linux distribution repositories. I install scripts like this to the standard /usr/local/bin (chmod 755) and manually create a start menu entry to run it.
 
 
 
